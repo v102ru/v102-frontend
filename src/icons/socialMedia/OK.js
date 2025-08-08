@@ -1,0 +1,44 @@
+var _defs, _g;
+var _excluded = ["title", "titleId"];
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+import * as React from "react";
+function SvgOk(_ref, svgRef) {
+  var title = _ref.title,
+    titleId = _ref.titleId,
+    props = _objectWithoutProperties(_ref, _excluded);
+  return /*#__PURE__*/React.createElement("svg", _extends({
+    xmlns: "http://www.w3.org/2000/svg",
+    xmlnsXlink: "http://www.w3.org/1999/xlink",
+    width: 20,
+    height: 20,
+    viewBox: "0 0 20 20",
+    ref: svgRef,
+    "aria-labelledby": titleId
+  }, props), title ? /*#__PURE__*/React.createElement("title", {
+    id: titleId
+  }, title) : null, _defs || (_defs = /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("clipPath", {
+    id: "clip-path-odnoklassniki"
+  }, /*#__PURE__*/React.createElement("rect", {
+    id: "\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A_17",
+    "data-name": "\\u041F\\u0440\\u044F\\u043C\\u043E\\u0443\\u0433\\u043E\\u043B\\u044C\\u043D\\u0438\\u043A 17",
+    width: 20,
+    height: 20,
+    transform: "translate(156 12)",
+    fill: "#fff"
+  })))), _g || (_g = /*#__PURE__*/React.createElement("g", {
+    id: "\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430_\\u043C\\u0430\\u0441\\u043E\\u043A_11",
+    "data-name": "\\u0413\\u0440\\u0443\\u043F\\u043F\\u0430 \\u043C\\u0430\\u0441\\u043E\\u043A 11",
+    transform: "translate(-156 -12)",
+    clipPath: "url(#clip-path-odnoklassniki)"
+  }, /*#__PURE__*/React.createElement("path", {
+    id: "icons8-odnoklassniki",
+    d: "M10.912.909a5,5,0,1,0,5,5A5.011,5.011,0,0,0,10.912.909Zm0,1.364A3.637,3.637,0,1,1,7.274,5.91,3.627,3.627,0,0,1,10.912,2.273Zm0,1.364a2.268,2.268,0,0,0-1.7.726,2.384,2.384,0,0,0,0,3.094,2.36,2.36,0,0,0,3.406,0,2.384,2.384,0,0,0,0-3.094A2.268,2.268,0,0,0,10.912,3.637Zm0,1.364a.818.818,0,0,1,.684.268,1.024,1.024,0,0,1,0,1.282.818.818,0,0,1-.684.268.818.818,0,0,1-.684-.268,1.024,1.024,0,0,1,0-1.282A.818.818,0,0,1,10.912,5Zm-4.1,5.706a2.043,2.043,0,0,0-1.051,3.8,9.813,9.813,0,0,0,1.844.837L5.538,17.483l-.019.02a2.046,2.046,0,1,0,3.057,2.719l-.019.02,2.353-2.437,2.354,2.437-.019-.02a2.047,2.047,0,0,0,2.888.17h0A2.056,2.056,0,0,0,16.3,17.5l-.019-.021-2.071-2.143A9.821,9.821,0,0,0,16.06,14.5,2.046,2.046,0,0,0,13.948,11a6.037,6.037,0,0,1-6.075,0,2.017,2.017,0,0,0-.763-.27A2.048,2.048,0,0,0,6.814,10.707Zm-.033,1.358a.688.688,0,0,1,.389.1,7.34,7.34,0,0,0,7.481,0,.682.682,0,1,1,.7,1.169,8.588,8.588,0,0,1-2.55,1.019.682.682,0,0,0-.341,1.139l2.822,2.921a.681.681,0,0,1-1.02.9l-.02-.021L11.4,16.351a.682.682,0,0,0-.98,0L7.577,19.3l-.019.02a.682.682,0,1,1-1.019-.906l2.818-2.919a.682.682,0,0,0-.341-1.139,8.591,8.591,0,0,1-2.55-1.019.672.672,0,0,1-.233-.936.681.681,0,0,1,.419-.314A.664.664,0,0,1,6.782,12.065Z",
+    transform: "translate(155.089 11.091)",
+    fill: "#fff"
+  }))));
+}
+var ForwardRef = /*#__PURE__*/React.forwardRef(SvgOk);
+export default "";
+export { ForwardRef as ReactComponent };
