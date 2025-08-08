@@ -1,0 +1,93 @@
+.recommended {
+  position: relative;
+  border-top: 2px solid #282C3B;
+  padding-top: 37px;
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    &:after {
+      content: '';
+      width: 18px;
+      height: 10px;
+      position: absolute;
+      right: 0;
+      top: -4px;
+      background-color: #F0F2F4;
+      border: 0;
+    }
+  }
+  //
+  //@media screen and (min-width: 768px) and (max-width: 1439px) {
+  //  &:after {
+  //    content: '';
+  //    width: 18px;
+  //    height: 10px;
+  //    position: absolute;
+  //    right: 0;
+  //    top: -4px;
+  //    background-color: #F0F2F4;
+  //    border: 0;
+  //  }
+  //}
+
+  &_color_white {
+    border-top: 2px solid #FFFFFF;
+    .recommended__heading {
+      color: #FFFFFF;
+      background-color: #282C3B;
+    }
+  }
+
+  &_color_dark {
+    border-top: 2px solid #282C3B;
+    .recommended__heading {
+      color: #282C3B;
+      background-color: #F0F2F4;
+    }
+  }
+
+  &__heading {
+    margin: 0;
+
+    position: absolute;
+    top: -18px;
+    padding-right: 13px;
+    font-size: 24px;
+    font-family: "PT Root UI Bold";
+    overflow: hidden;
+    color: #282C3B;
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      padding-left: 18px;
+    }
+  }
+
+  &__cards {
+    @media screen and (min-width: 768px) {
+      display: grid;
+      justify-content: space-between;
+      grid-column-gap: 12px;
+      grid-template-columns: 408px 408px 408px;
+      grid-template-rows: 230px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1439px) {
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      .carousel-slider {
+        overflow: visible;
+      }
+
+      .control-dots {
+        position: absolute;
+        bottom: -30px;
+        text-align: left;
+        margin-left: 15px;
+      }
+    }
+  }
+}

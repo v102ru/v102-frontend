@@ -1,0 +1,45 @@
+/* react-image-gallery styles are embedded via component CSS import in FeedCard.tsx */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  color: #3366BB;
+  cursor: pointer;
+}
+
+@font-face {
+    font-family: 'PT Root UI Bold';
+    src: url("./fonts/PT-Root-UI_Bold.ttf");
+}
+
+@font-face {
+    font-family: 'PT Root UI Medium';
+    src: url("./fonts/PT-Root-UI_Medium.ttf");
+}
+
+@font-face {
+    font-family: 'PT Root UI Light';
+    src: url("./fonts/PT-Root-UI_Light.ttf");
+}
+
+@font-face {
+    font-family: 'PT Root UI Regular';
+    src: url("./fonts/PT-Root-UI_Regular.ttf");
+}
+
+@page {
+  margin: 2cm;
+}

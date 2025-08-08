@@ -1,0 +1,56 @@
+.socialMediaExpandedList {
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+
+  background-color: #3E424F;
+  border-radius: 5px;
+  height: 44px;
+
+  -webkit-transition: width .9s;
+  transition: max-width .9s, min-width .9s;
+  width: auto;
+
+  &_expanded {
+    max-width: 350px;
+    min-width: 140px;
+  }
+
+  &_collapsed {
+    max-width: 140px;
+    min-width: 140px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin: 0 8px;
+    color: white;
+
+    &_expanding {
+      animation-name: opacityPop;
+      animation-duration: .9s;
+    }
+  }
+
+  &__rest {
+    transition: all .9s;
+
+    &_expanded {
+      transition: all .9s;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+@keyframes opacityPop {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

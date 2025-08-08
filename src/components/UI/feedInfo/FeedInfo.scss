@@ -1,0 +1,62 @@
+.feedInfo {
+  display: flex;
+
+  &_all {
+    .feedInfo__section {
+      .item:not(:last-of-type) {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__section {
+    display: flex;
+    align-items: center;
+    &:first-child {
+      margin-right: 20px;
+      @media screen and (max-width: 767px) {
+        margin-bottom: 4px;
+      }
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      //&:first-of-type {
+      //  margin-right: 20px;
+      //}
+
+      &__text {
+        display: flex;
+        vertical-align: top;
+        &_gray {
+          color: #9B9FAD;
+        }
+        &_white {
+          color: #FFFFFF;
+        }
+
+        @media screen and (max-width: 767px) {
+          font-size: 14px;
+        }
+      }
+
+      &__logo {
+        margin-right: 6px;
+        display: flex;
+        align-items: center;
+        z-index: 1;
+        &_white {
+          svg path {
+            fill: #FFFFFF;
+          }
+        }
+        &_gray {
+          svg path {
+            fill: #9B9FAD;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.sectionLink {
+  &__wrapper {
+    position: relative;
+
+    &:not(:last-of-type) {
+      padding-right: 18px;
+      margin-right: 18px;
+
+      &:after {
+        content: '';
+        height: 14px;
+        width: 2px;
+        background-color: #FA6E03;
+        position: absolute;
+        top: calc(50% - 7px);
+        right: 0;
+      }
+    }
+
+    &:last-of-type {
+      margin-right: 120px;
+    }
+  }
+
+  &__name {
+    font-size: 18px;
+    font-family: "PT Root UI Medium";
+    color: #282C3B;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,20 @@
+.advertisement {
+  min-width: 150px;
+  min-height: 200px;
+  background: url("../../../images/advertisement.png") no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__text {
+    color: white;
+    padding: 30px;
+    border-radius: 5px;
+
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}

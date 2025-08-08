@@ -1,0 +1,111 @@
+$background-colour: #FFF;
+$text-colour: #000;
+
+// Bar Settings
+$bar-colour: $text-colour;
+$bar-animation-duration: 2.8s;
+
+// These are not to be adjusted; it would mess
+// with the angles. If anyone knows how to make
+// the angles dynamic. I'd love to hear it.
+$bar-width: 3px;
+$bar-height: 25px;
+$bar-count: 7;
+
+// Generated settings
+$bar-animation-duration-single: -($bar-animation-duration / $bar-count);
+
+[role="progressbar"] {
+  position: relative;
+  padding: 0;
+  width: 100px;
+  height: $bar-height;
+  list-style: none;
+
+  li {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: $bar-width;
+    height: $bar-height;
+    border-radius: 1px;
+    // Rotate from the middle of the bottom
+    transform-origin: 50% 100%;
+    background-color: $bar-colour;
+    animation: bar linear $bar-animation-duration infinite;
+    // Tell the browser which properties will change in the animation
+    will-change: transform;
+
+    // Set default states for browsers that don't support animations
+    &:nth-child(1) {
+      transform: translateX(0) rotate(0deg);
+      opacity: .2;
+    }
+    &:nth-child(2) {
+      transform: translateX(-15px) rotate(0deg);
+      animation-delay: $bar-animation-duration-single;
+    }
+    &:nth-child(3) {
+      transform: translateX(-30px) rotate(0deg);
+      animation-delay: ($bar-animation-duration-single * 2);
+    }
+    &:nth-child(4) {
+      transform: translateX(-45px) rotate(10deg);
+      animation-delay: ($bar-animation-duration-single * 3);
+    }
+    &:nth-child(5) {
+      transform: translateX(-60px) rotate(40deg);
+      animation-delay: ($bar-animation-duration-single * 4);
+    }
+    &:nth-child(6) {
+      transform: translateX(-75px) rotate(62deg);
+      animation-delay: ($bar-animation-duration-single * 5);
+    }
+    &:nth-child(7) {
+      transform: translateX(-90px) rotate(72deg);
+      animation-delay: ($bar-animation-duration-single * 6);
+    }
+  }
+}
+@keyframes bar {
+  0% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  14.28% {
+    transform: translateX(-15px) rotate(0deg);
+    opacity: 1;
+  }
+  28.56% {
+    transform: translateX(-30px) rotate(0deg);
+    opacity: 1;
+  }
+  37.12% {
+    transform: translateX(-39px) rotate(0deg);
+    opacity: 1;
+  }
+  42.84% {
+    transform: translateX(-45px) rotate(10deg);
+    opacity: 1;
+  }
+  57.12% {
+    transform: translateX(-60px) rotate(40deg);
+    opacity: 1;
+  }
+  71.4% {
+    transform: translateX(-75px) rotate(62deg);
+    opacity: 1;
+  }
+  85.68% {
+    transform: translateX(-90px) rotate(72deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-105px) rotate(74deg);
+    opacity: 0;
+  }
+};
+
+[role="progressbar"] {
+  margin: 0 auto;
+}

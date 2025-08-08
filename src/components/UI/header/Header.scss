@@ -1,0 +1,366 @@
+.mainHeader {
+  z-index: 980;
+  width: 100%;
+  top: 0;
+  position: sticky;
+
+  &_fixed {
+    z-index: 980;
+    width: 100%;
+  }
+
+  &__wrapper {
+    background-color: #282C3B;
+    height: 68px;
+  }
+
+  &_opened {
+    transition: .5s;
+
+    max-height: 400px;
+  }
+
+  .mobileLinks {
+    visibility: hidden;
+    transition: all .5s, opacity .4s;
+    background-color: #282C3B;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    max-height: 0;
+    z-index: 9800;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &_opened {
+      opacity: 1;
+      visibility: visible;
+      max-height: 70%;
+      transition: all .5s, opacity .4s;
+    }
+
+    &__social {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      height: 44px;
+      background-color: #3E424F;
+
+      .socialMediaExpandedList {
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 32px;
+        padding: 0;
+        margin: 0 auto;
+        grid-auto-columns: min-content;
+
+         &__item {
+           margin: 0;
+         }
+      }
+    }
+
+    .links {
+      &__item {
+        color: white;
+      }
+    }
+
+    .rest {
+      width: 64px;
+      display: flex;
+      justify-content: space-between;
+
+      margin-bottom: 24px;
+    }
+
+    .sections {
+      align-self: stretch;
+      overflow-y: auto;
+      background-color: white;
+      padding: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      &__link {
+        width: 50%;
+        font-size: 16px;
+        font-family: "PT Root UI Medium";
+        color: #282C3B;
+        margin-bottom: 14px;
+      }
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      color: #FFFFFF;
+      font-size: 20px;
+      font-family: "PT Root UI Medium";
+      margin-bottom: 20px;
+
+      a {
+        &:not(:last-of-type) {
+          margin-bottom: 17px;
+        }
+      }
+    }
+
+    &__outside {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100vw;
+      height: 100vh;
+      z-index: 900;
+    }
+  }
+
+  .wrapper {
+    &__navigation {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
+      @media screen and (min-width: 1440px) {
+        width: 1272px;
+      }
+
+      @media screen and (min-width: 1006px) and (max-width: 1439px) {
+        margin: 0 20px;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 1005px) {
+        margin: 0 18px;
+      }
+    }
+
+    .navigation {
+      &__logo {
+        display: flex;
+        align-items: center;
+
+        @media screen and (min-width: 961px) and (max-width: 1439px) {
+          margin-right: 12px;
+        }
+
+        @media screen and (min-width: 1440px) {
+          margin-right: 48px;
+        }
+      }
+
+      &__rest {
+        display: flex;
+      }
+
+      .rest {
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+        height: 100%;
+
+        &__socialMedia {
+          display: flex;
+          align-items: center;
+          position: relative;
+          min-width: 150px;
+
+          .socialMediaExpandedList {
+            position: absolute;
+            right: 0;
+          }
+
+          @media screen and (min-width: 320px) and (max-width: 1005px) {
+            display: none;
+          }
+        }
+
+        &__buttons {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          width: 110px;
+
+          a {
+            display: flex;
+          }
+
+          @media screen and (min-width: 320px) and (max-width: 1005px) {
+            width: 64px;
+
+            *:not(:nth-last-child(-n+2)) {
+              display: none;
+            }
+          }
+        }
+
+        .buttons {
+          &__mobileMenu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media screen and (min-width: 1005px) {
+              display: none;
+            }
+
+            svg * {
+
+            }
+          }
+        }
+
+        &__weather {
+          margin-right: 23px;
+        }
+      }
+
+      .links {
+        &__item {
+          color: white;
+          text-decoration: none;
+          position: relative;
+
+          &_active {
+            color: #FA6E03;
+
+            &:after {
+              content: '';
+              height: 2px;
+              width: 24px;
+              border-top-right-radius: 2px;
+              border-top-left-radius: 2px;
+              background-color: #FA6E03;
+              position: absolute;
+              bottom: -23px;left: 50%;
+              -webkit-transform: translateX(-50%);
+              transform: translateX(-50%)
+            }
+          }
+
+          @media screen and (min-width: 1440px) {
+            margin-right: 23px;
+            font-size: 18px;
+            font-family: "PT Root UI Regular";
+          }
+
+          @media screen and (min-width: 1005px) and (max-width: 1439px) {
+            margin-right: 12px;
+            font-size: 18px;
+            font-family: "PT Root UI Regular";
+          }
+
+          @media screen and (min-width: 320px) and (max-width: 1005px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__sections {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E0E1E4;
+    height: 46px;
+
+    @media screen and (min-width: 320px) and (max-width: 1005px) {
+      display: none;
+    }
+  }
+
+  .sections {
+    &__list {
+      position: relative;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 84px;
+      margin: 0 auto;
+
+      @media screen and (min-width: 1440px) {
+        width: 1272px;
+      }
+
+      @media screen and (min-width: 961px) and (max-width: 1439px) {
+        padding: 0;
+        margin: 0 20px;
+      }
+    }
+
+    .list {
+      display: flex;
+
+      &__arrow {
+
+        z-index: 999;
+        width: 40px;
+        height: 20px;
+      }
+
+      &__leftIcon {
+        background-image: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 10.39%, rgba(255, 255, 255,  .75) 25.6%, rgba(255, 255, 255, .25) 79.19%, rgba(255, 255, 255, 0.05) 100%);
+        position: absolute;
+        left: 0;
+        text-align: left;
+      }
+
+      &__rightIcon {
+        position: absolute;
+        right: 0;
+        text-align: right;
+        background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, .25) 10.39%, rgba(255, 255, 255,  .75) 25.6%, rgba(255, 255, 255, 1) 79.19%, rgba(255, 255, 255, 1) 100%);
+      }
+    }
+  }
+
+  &__notification {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #F0F2F4;
+    height: 46px;
+
+    @media screen and (min-width: 320px) and (max-width: 1005px) {
+      margin-top: 68px;
+    }
+
+    @media screen and (min-width: 1006px) {
+      margin-top: 114px;
+    }
+  }
+
+  .notification {
+    display: flex;
+    align-items: center;
+
+    .content {
+      display: flex;
+      align-items: center;
+      margin: 0 18px;
+      min-width: 0;
+
+
+      @media screen and (min-width: 1440px) {
+        width: 1272px;
+        margin: 0 auto;
+      }
+
+      &__logo {
+        display: flex;
+        align-items: center;
+        margin-right: 12px;
+      }
+
+      &__text {
+        color: #FA6E03;
+        font-size: 18px;
+        font-family: "PT Root UI Medium";
+
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

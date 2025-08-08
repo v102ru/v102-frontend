@@ -1,0 +1,47 @@
+.popular {
+  position: relative;
+  border-top: 2px solid #282C3B;
+  padding-top: 37px;
+  margin-top: 40px;
+
+  @media screen and (min-width: 320px) and (max-width: 1439px) {
+    margin-left: 18px;
+    &:after {
+      content: '';
+      width: 18px;
+      height: 10px;
+      position: absolute;
+      right: 0;
+      top: -4px;
+      background-color: #F0F2F4;
+      border: 0;
+    }
+  }
+
+  &__heading {
+    position: absolute;
+    top: -18px;
+    padding-right: 13px;
+    background-color: #F0F2F4;
+    font-size: 24px;
+    font-family: "PT Root UI Bold";
+    overflow: hidden;
+    color: #282C3B;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+
+    @media screen and (min-width: 320px) and (max-width: 1439px) {
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      & > *:not(:last-of-type) {
+        margin-right: 12px;
+      }
+    }
+  }
+}

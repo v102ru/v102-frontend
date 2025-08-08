@@ -1,0 +1,43 @@
+.shareCard {
+  background-color: #9B9FAD;
+  border-radius: 8px;
+  padding: 12px 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    padding: 12px;
+  }
+
+  svg path {
+    fill: #FFFFFF !important;
+  }
+
+  &_theme {
+    &_telegram:hover {
+      background-color: #10AEEE;
+    }
+
+    &_vk:hover {
+      background-color: #3D73C9;
+    }
+
+    &_facebook:hover {
+      background-color: #3353C6;
+    }
+
+    &_ok:hover {
+      background-color: #FA7503;
+    }
+
+    &_twitter:hover {
+      background-color: #10AEEE;
+    }
+
+    &_copyLink:hover {
+      background-color: #64BC0C;
+    }
+  }
+}

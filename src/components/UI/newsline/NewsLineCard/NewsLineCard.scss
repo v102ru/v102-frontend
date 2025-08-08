@@ -1,0 +1,19 @@
+.newsLineCard {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #E0E1E4;
+  padding-bottom: 8px;
+
+  &__createdAt {
+    font-size: 13px;
+    font-family: "PT Root UI Regular";
+    color: #9B9FAD;
+    margin-bottom: 4px;
+  }
+
+  &__text {
+    font-size: 16px;
+    font-family: "PT Root UI Regular";
+    color: #282C3B;
+  }
+}
