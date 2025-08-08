@@ -1,0 +1,14 @@
+.category {
+  position: relative;
+  color: #FA6E03;
+
+  &:after {
+    content: '';
+    height: 14px;
+    width: 2px;
+    background-color: #FA6E03;
+    position: absolute;
+    top: calc(50% - 7px);
+    left: -16px;
+  }
+}

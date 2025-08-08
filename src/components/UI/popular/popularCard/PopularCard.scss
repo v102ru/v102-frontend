@@ -1,0 +1,25 @@
+.popularCard {
+  display: flex;
+  flex-direction: column;
+  width: 172px;
+
+  &__image {
+    width: 172px;
+    height: 172px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    font-size: 15px;
+    font-family: "PT Root UI Medium";
+    color: #282C3B;
+    line-height: 1.35;
+  }
+}

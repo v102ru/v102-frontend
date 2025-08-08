@@ -1,0 +1,23 @@
+.showMoreButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  background-color: white;
+  border-radius: 8px;
+  border: 0px;
+
+  &__text {
+    color: #FA6E03;
+  }
+
+  @media screen and (min-width: 1440px) {
+    height: 72px;
+
+    &__text {
+      font-size: 20px;
+      font-family: "PT Root UI Medium";
+    }
+  }
+}

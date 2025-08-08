@@ -1,0 +1,23 @@
+.toTopButton {
+  width: 60px;
+  height: 60px;
+  border: 0px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.1);
+
+  position: fixed;
+  right: 16px;
+  bottom: 5%;
+  z-index: 999;
+  cursor: pointer;
+  color: green;
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    bottom: 40px;
+  }
+}

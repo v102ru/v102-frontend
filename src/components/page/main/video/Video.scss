@@ -1,0 +1,75 @@
+.videoPage {
+  flex-grow: 1;
+  background-image: url("../../../../images/specProjectPreviewBackground.png");
+  background-color: #282C3B;
+  background-repeat: repeat-x;
+  color: white;
+  padding-bottom: 48px;
+  overflow: hidden;
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    padding-bottom: 0;
+  }
+
+  &__heading {
+    font-size: 36px;
+    font-family: "PT Root UI Bold";
+
+    @media screen and (min-width: 1440px) {
+      width: 1272px;
+      margin: 24px auto 30px;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      font-size: 24px;
+      margin: 20px 12px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1439px) {
+      margin: 24px 20px;
+      font-size: 28px;
+    }
+  }
+
+  &__video {
+    display: flex;
+    height: 724px;
+    margin: 0 12px 24px;
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      height: 360px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1439px) {
+      height: 542px;
+    }
+  }
+
+  .videoSlider {
+    margin-bottom: 24px;
+  }
+
+  & > .content {
+    border-top: 1px solid #3B3F4D;
+    @media screen and (min-width: 1440px) {
+      width: 1272px;
+      margin: 0 auto;
+    }
+
+    & > .shareSection {
+      padding-top: 8px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .recommendedFeed {
+      margin-top: 45px;
+      @media screen and (min-width: 768px) and (max-width: 1439px) {
+        margin: 45px 20px 0 20px;
+      }
+      & > .recommended:after {
+        background-color: #282C3B;
+      }
+    }
+  }
+}

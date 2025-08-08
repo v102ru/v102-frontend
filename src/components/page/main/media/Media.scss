@@ -1,0 +1,95 @@
+.media {
+  flex-grow: 1;
+  background-image: url("../../../../images/specProjectPreviewBackground.png");
+  background-color: #282C3B;
+  background-repeat: repeat-x;
+  color: white;
+  overflow: hidden;
+
+  & > .content {
+    @media screen and (min-width: 1440px) {
+      max-width: 1272px;
+      margin: 0 auto;
+    }
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      margin: 0 18px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1439px) {
+      margin: 0 36px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media screen and (min-width: 320px) and (max-width: 1439px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      @media screen and (min-width: 320px) and (max-width: 767px) {
+        margin: 16px 0;
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 1439px) {
+        margin: 12px 0;
+      }
+      &__name {
+        font-size: 36px;
+        font-family: "PT Root UI Bold";
+        @media screen and (min-width: 1440px) {
+          margin: 36px 0;
+        }
+        @media screen and (min-width: 320px) and (max-width: 767px) {
+          margin: 16px 0;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1439px) {
+          margin: 12px 0;
+        }
+      }
+
+      .allTags {
+        overflow-y: auto;
+        .tag {
+          flex-shrink: 0;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 1439px) {
+          width: 100%;
+          .tag:last-of-type {
+            margin-left: 4px;
+          }
+        }
+      }
+    }
+
+    .content {
+      &__cards {
+        margin-bottom: 48px;
+      }
+    }
+
+    .cards {
+      display: grid;
+      @media screen and (min-width: 1440px) {
+        grid-template-columns: 408px 408px 408px;
+        grid-gap: 24px;
+        grid-auto-rows: minmax(272px, auto);
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 1439px) {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 12px;
+        grid-auto-rows: minmax(272px, auto);
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 767px) {
+        grid-template-columns: 1fr;
+        grid-gap: 24px;
+        grid-auto-rows: minmax(272px, auto);
+      }
+    }
+  }
+}

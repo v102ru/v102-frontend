@@ -1,0 +1,593 @@
+.feedCard {
+  position: relative;
+  border-radius: 8px;
+  text-align: left;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__mockedImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      height: 200px;
+    }
+
+  }
+
+  h2 {
+    transition: .2s;
+  }
+
+  &:hover {
+    h2 {
+      transition: .2s;
+      color: #7e7e7e;
+    }
+  }
+
+  .content {
+    &__heading {
+      margin: 0px;
+    }
+
+    &__category {
+      position: relative;
+      color: #FA6E03;
+
+      &:after {
+        content: '';
+        height: 14px;
+        width: 2px;
+        background-color: #FA6E03;
+        position: absolute;
+        top: calc(50% - 7px);
+        left: -16px;
+      }
+    }
+  }
+}
+
+// Full SpecProjects
+.fullSpecProjects {
+  cursor: pointer;
+}
+
+// Photo Card
+.photoFeedCard {
+  border-radius: 8px;
+  overflow: hidden;
+  max-height: 498px;
+  background-color: #FFFFFF;
+
+  .mediaAmount {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+  }
+
+  &:hover {
+    h2 {
+      color: #c0c0c0;
+    }
+  }
+
+
+  // sizes
+  &_big {
+    .content {
+      &__heading {
+        font-family: "PT Root UI Bold";
+        font-size: 24px;
+      }
+    }
+  }
+
+  &_small {
+    .content {
+      &__heading {
+        font-weight: 400;
+        font-family: "PT Root UI Medium";
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__content {
+    flex-grow: 0;
+    color: white;
+    position: absolute;
+    bottom: 16px;
+  }
+
+  .content {
+    &__heading {
+      margin: 10px 0px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__content {
+      padding: 0 36px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &__content {
+      padding: 0 16px 16px;
+    }
+
+    .content {
+      &__heading {
+        font-size: 20px;
+        font-family: "PT Root UI Bold";
+      }
+
+      .feedInfo {
+        svg path {
+          fill: white;
+        }
+
+        .item {
+          &__text {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Slider Card
+.sliderFeedCard {
+  height: 100%;
+
+  &__slideButton {
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      svg {
+        width: 9px;
+        height: 18px;
+      }
+    }
+  }
+
+  .fullFeedCard {
+    &__content {
+      .content {
+        &__heading {
+          font-size: 24px;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+// Video Card
+.videoFeedCard {
+  border-radius: 8px;
+  overflow: hidden;
+  max-height: 498px;
+  background-color: #FFFFFF;
+
+  .mediaAmount {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+  }
+
+  &:hover {
+    h2 {
+      color: #c0c0c0;
+    }
+  }
+
+  // sizes
+  &_big {
+    .content {
+      &__heading {
+        font-family: "PT Root UI Bold";
+        font-size: 24px;
+      }
+    }
+  }
+
+  &_small {
+    .content {
+      &__heading {
+        font-weight: 400;
+        font-family: "PT Root UI Medium";
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__content {
+    flex-grow: 0;
+    color: white;
+    position: absolute;
+    bottom: 16px;
+  }
+
+  .content {
+    &__heading {
+      margin: 10px 0px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__content {
+      padding: 0 36px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &__content {
+      padding: 0 16px 16px;
+    }
+
+    .content {
+      &__heading {
+        font-size: 20px;
+        font-family: "PT Root UI Bold";
+      }
+    }
+  }
+}
+
+// Half Card
+.halfFeedCard {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .feedInfo {
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+    }
+
+    display: flex;
+    color: #9B9FAD;
+    font-size: 13px;
+    justify-content: space-between;
+
+    svg path {
+      fill: #9B9FAD;
+    }
+  }
+
+  // start of sizes
+  &_small {
+    .halfFeedCard__image {
+      height: 200px;
+    }
+  }
+
+  &_medium {
+    .halfFeedCard__image {
+      height: 260px;
+    }
+  }
+
+  &_big {
+    .halfFeedCard__image {
+      height: 350px;
+
+      @media screen and (min-width: 320px) and (max-width: 767px) {
+        height: 200px;
+      }
+    }
+  }
+
+  // end of sizes ^^
+
+  &__image {
+    margin-bottom: 10px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    flex-grow: 0;
+    color: black;
+    padding: 0 16px 16px;
+  }
+
+  .content {
+    &__heading {
+      margin: 10px 0 20px;
+      font-size: 20px;
+      font-family: "PT Root UI Medium";
+      font-weight: 400;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__image {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &__image {
+      height: 204px;
+      margin-bottom: 6px;
+    }
+
+    &__content {
+      color: black;
+      padding: 0 16px 16px;
+    }
+
+    .content {
+      &__heading {
+        font-size: 20px;
+        font-family: "PT Root UI Bold";
+      }
+
+      .feedInfo {
+        svg path {
+          fill: black;
+        }
+
+        .item {
+          &__text {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Article Extra Card
+.articleExtraCard {
+  min-height: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    border-radius: 0;
+  }
+
+  &__background {
+    @media screen and (min-width: 380px) and (max-width: 767px) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background-image: linear-gradient(to right, rgba(255,0,0,0) 0%, rgb(255, 255, 255) 35%, rgb(255, 255, 255));
+    }
+  }
+
+  .feedInfo {
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      bottom: 16px;
+
+      display: flex;
+      color: #9B9FAD;
+      font-size: 13px;
+      justify-content: space-between;
+    }
+
+    svg path {
+      fill: #9B9FAD;
+    }
+  }
+
+  &__image {
+    margin-bottom: 10px;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+
+    @media screen and (min-width: 380px) and (max-width: 767px) {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 379px) {
+      height: 200px !important;
+    }
+  }
+
+  &__content {
+    flex-grow: 0;
+    color: black;
+    padding: 0 16px 16px;
+  }
+
+  .content {
+    @media screen and (min-width: 380px) and (max-width: 767px) {
+      min-height: inherit;
+      display: flex;
+      flex-direction: column;
+      z-index: 999;
+      width: 65%;
+      margin-left: auto;
+      padding: 12px 16px
+    }
+
+    &__category {
+      z-index: 1;
+    }
+
+    & > .feedInfo {
+      z-index: 1;
+    }
+
+    &__heading {
+      margin: 10px 0 20px;
+      font-size: 20px;
+      z-index: 999;
+      font-family: "PT Root UI Medium";
+      flex-grow: 1;
+      font-weight: 400;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .content {
+      &__heading {
+        font-size: 20px;
+        font-family: "PT Root UI Bold";
+      }
+
+      .feedInfo {
+        svg path {
+          fill: black;
+        }
+
+        .item {
+          &__text {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Full Regular Card
+.fullRegularCard {
+  display: block;
+  .content {
+    bottom: 16px;
+    &__heading {
+      @media screen and (min-width: 768px) {
+        font-size: 20px;
+        font-weight: 400;
+        font-family: "PT Root UI Medium";
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1439px) {
+      padding: 0 16px;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      padding: 0 16px 16px;
+    }
+  }
+}
+
+// Full Card
+.fullFeedCard {
+  border-radius: 8px;
+  overflow: hidden;
+  max-height: 498px;
+  background-color: #FFFFFF;
+
+  &:hover {
+    h2 {
+      color: #c0c0c0;
+    }
+  }
+
+  &__image {
+    display: flex;
+  }
+
+  &__image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+      height: 200px;
+    }
+  }
+
+  &__content {
+    flex-grow: 0;
+    color: white;
+  }
+
+  .content {
+    &__heading {
+      margin: 10px 0px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__image {
+      height: 100%;
+      width: 100%;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1));
+      }
+    }
+    &__content {
+      position: absolute;
+      padding: 0 36px;
+      bottom: 36px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &__image {
+      margin-bottom: 6px;
+    }
+
+    &__content {
+      color: black;
+      padding: 0 16px 16px;
+    }
+
+    .content {
+      &__heading {
+        font-size: 20px;
+        font-family: "PT Root UI Bold";
+      }
+
+      .feedInfo {
+        svg path {
+          fill: black;
+        }
+
+        .item {
+          &__text {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.mediaAmount {
+  width: 36px;
+  height: 16px;
+  border-radius: 4px;
+  background-color: rgba(40, 44, 59, 0.5);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 8px;
+
+  &__value {
+    font-size: 14px;
+    font-family: "PT Root UI Regular";
+    color: white;
+  }
+}

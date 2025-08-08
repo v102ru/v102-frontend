@@ -1,0 +1,60 @@
+.quote {
+  display: flex;
+  align-items: flex-start;
+  padding: 36px;
+
+  border-radius: 8px;
+  background-color: #FFFFFF;
+
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    padding: 20px 0;
+
+    &__logo {
+      margin-right: 12px;
+      svg {
+        width: 28px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__logo {
+    margin-right: 24px;
+  }
+
+  .info {
+    &__text {
+      font-size: 20px;
+      font-family: "PT Root UI Medium";
+      @media screen and (min-width: 320px) and (max-width: 767px) {
+        font-size: 18px;
+      }
+    }
+
+    .author {
+      padding-top: 16px;
+      border-top: 1px solid #E0E1E4;
+
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+
+      &__name {
+        font-size: 20px;
+        font-family: "PT Root UI Medium";
+        @media screen and (min-width: 320px) and (max-width: 767px) {
+          font-size: 18px;
+        }
+      }
+
+      &__post {
+        font-size: 16px;
+        font-family: "PT Root UI Regular";
+        @media screen and (min-width: 320px) and (max-width: 767px) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
